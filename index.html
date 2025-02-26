@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</head>
+<body>    
+    <div class="title-container no-container">
+        <img class="icon" src="./images/open-book.png" style="width: 48px;" alt="Library">        
+        <!-- <i class="fa-solid fa-book-open fa-2xl" style="color: #74C0FC;"></i> -->
+        
+        <h2>Book Library</h2>
+    </div>
+    
+    <div class="container no-container" id="container">
+        <div class="form-section">
+            <div class="input-group">
+                <label for="numBooks">How Many Books?</label>
+                <input 
+                    id="numBooks" 
+                    min="1" 
+                    placeholder="Enter number of books"
+                    required
+                >
+                <span id="error-message" class="error-message">Please enter a valid number greater than 0.</span>
+   
+            </div>
+            <button class="button" onclick="handleSubmit()">
+                Continue
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="./images/library.jpg" alt="Library">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+
+    <div class="title-container book-container">
+        <h2>Book Submission</h2>
+    </div>
+    <div class="container book-container">
+        <div class="form-section">
+            <form id="bookForm">
+                <div id="formDiv">
+                    <div class="input-group">
+                        <label for="name">Book Name</label>
+                        <input type="text" id="bookName" name="name">
+                        <div class="error-message" id="nameError">This field is required</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="price">Price</label>
+                        <input id="bookPrice" name="price">
+                        <div class="error-message" id="priceError">Please enter a valid price</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="authorName">Author Name</label>
+                        <input type="text" id="authorName" name="authorName">
+                        <div class="error-message" id="authorNameError">This field is required</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="authorEmail">Author Email</label>
+                        <input type="email" id="authorEmail" name="authorEmail">
+                        <div class="error-message" id="authorEmailError">Please enter a valid email</div>
+                    </div>
+                </div>
+                <button type="submit" class="button" id="next">Next</button>
+                <button type="submit" class="button" id="sub">Submit</button>
+            </form>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="./images/library.jpg" alt="Book Image">
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <div id="particles-js" class="hidden"></div>
+
+
+    <div class="title-container table-container">        
+        <h2>Book Library</h2>
+    </div>
+    
+    <div class="table-container">
+        <table class="books-table">
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Book Price</th>
+                    <th>Author Name</th>
+                    <th>Author Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                <tr>
+                    <td</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="mailto:author@example.com"></a></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="script.js">
+    </script>
+
+
+<!-- <script>
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 100 },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            move: { speed: 2 }
+        }
+    });
+    </script> -->
+    
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Library</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 10px; }
+        input { margin: 5px; padding: 5px; }
+        button { margin: 5px; padding: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Project Library</h2>
+    
+    <label for="numBooks">Enter number of books: </label>
+    <input type="number" id="numBooks" min="1">
+    <button onclick="generateForm()">Generate Form</button>
+    
+    <div id="bookForm"></div>
+
+    <h3>Books List</h3>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Author</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
