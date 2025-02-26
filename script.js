@@ -31,10 +31,11 @@
         errorMessage.style.display = "none";
         toggleContainers("no-container", "book-container");
         numOfBooks = value;
+        input.value='';
         document.getElementById("next").textContent = `Add Book ${bookCounter + 1}`;
     }
 
-    // Reusable Function to Toggle Containers
+    // Function to Toggle Containers
     function toggleContainers(hideClass, showClass) {
         const hideElements = document.getElementsByClassName(hideClass);
         const showElements = document.getElementsByClassName(showClass);
@@ -227,7 +228,6 @@
 
         const check = document.getElementsByClassName("table-container")[0];
         if (check.style.display != "none") {
-            console.log("Moaz");
             const m = document.getElementById("particles-js");
             if (m.classList.contains("hidden")) {
                 m.classList.remove("hidden");
@@ -304,6 +304,8 @@
 
         if (books.length < 1) {
             toggleContainers("table-container", "no-container");
+            const m = document.getElementById("particles-js");
+            m.classList.add("hidden");
         }
     }
 
