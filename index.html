@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library</title>
-    <!-- Add Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -12,26 +12,21 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </head>
-<body>    
+
+<body>
     <div class="title-container no-container">
-        <img class="icon" src="./images/open-book.png" style="width: 48px;" alt="Library">        
-        <!-- <i class="fa-solid fa-book-open fa-2xl" style="color: #74C0FC;"></i> -->
-        
+        <img class="icon" src="./images/open-book.png" style="width: 48px;" alt="Library">
+
         <h2>Book Library</h2>
     </div>
-    
+
     <div class="container no-container" id="container">
         <div class="form-section">
             <div class="input-group">
                 <label for="numBooks">How Many Books?</label>
-                <input 
-                    id="numBooks" 
-                    min="1" 
-                    placeholder="Enter number of books"
-                    required
-                >
+                <input id="numBooks" min="1" placeholder="Enter number of books" required>
                 <span id="error-message" class="error-message">Please enter a valid number greater than 0.</span>
-   
+
             </div>
             <button class="button" onclick="handleSubmit()">
                 Continue
@@ -95,14 +90,14 @@
 
 
 
-    
+
     <div id="particles-js" class="hidden"></div>
 
 
-    <div class="title-container table-container">        
+    <div class="title-container table-container">
         <h2>Book Library</h2>
     </div>
-    
+
     <div class="table-container">
         <table class="books-table">
             <thead>
@@ -116,7 +111,6 @@
             </thead>
             <tbody id="body">
                 <tr>
-                    <td</td>
                     <td></td>
                     <td></td>
                     <td><a href="mailto:author@example.com"></a></td>
@@ -130,11 +124,7 @@
             </tbody>
         </table>
     </div>
-
-
-
-
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
